@@ -1,22 +1,63 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+    <ClientRouter />
+  </head>
+  <body>
+    <Header />
+    <main class="container mx-auto px-4 py-8">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(245, 246, 247);
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    flex: 1;
+  }
+</style>
+
+<style is:global>
+  section {
+    max-width: 900px;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
 </style>
