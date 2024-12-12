@@ -9,17 +9,19 @@ import { Image } from "astro:assets";
     <h2>
       <a href="/" class="flex items-center gap-4">
         <Image src={imgLogo} alt="logo" class="size-12" />
-        My Blog</a
-      >
+
+        <span class="hidden lg:inline">My Blog</span>
+      </a>
     </h2>
-    <div class="internal-links justify-self-center">
+    <div
+      class="internal-links justify-self-end md:justify-self-center col-span-2 md:col-span-1"
+    >
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
     </div>
     <div class="social-links justify-self-end">
-      <a href="https://github.com/withastro/astro" target="_blank">
-        <span class="sr-only">Go to Astro's GitHub repo</span>
+      <a href="https://github.com/Jonathan-Bello/ED-Astro" target="_blank">
         <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
           ><path
             fill="currentColor"
@@ -60,7 +62,7 @@ import { Image } from "astro:assets";
   .social-links a {
     display: flex;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     .social-links {
       display: none;
     }

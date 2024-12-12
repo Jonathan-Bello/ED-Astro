@@ -1,3 +1,12 @@
 # ED AStro
 
-Modulo 6 del curso de Astro.js
+Producto final del curso de Astro.js
+impartido en EDteam.
+
+## Tecnologías
+
+- Astro.js
+- Tailwind CSS
+- Markdown
+
+Por Jonathan Alexis Bello Lopez
